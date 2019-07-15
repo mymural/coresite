@@ -1,0 +1,38 @@
+<!-- views/brief/list -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partials/head %>
+</head>
+
+<body>
+<div class="maincontent">
+    <header>
+        <% include ../partials/header %>
+    </header>
+
+    <main>
+        <div>
+            <h1>Current Opportunities</h1>
+            <% if (briefs.length) {
+                %><ul>
+                    <% briefs.forEach((brief) => {
+                        %>
+                        <li><%= brief._id %> <%= brief_title %></li>
+                    <%
+                    }) %>
+                </ul> <%
+            } %>
+
+        </div>
+    </main>
+
+    <footer>
+        <% include ../partials/footer %>
+    </footer>
+</div>
+</body>
+
+</html>

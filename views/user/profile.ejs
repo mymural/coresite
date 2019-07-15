@@ -1,0 +1,36 @@
+<!-- views/user/profile -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partials/head %>
+</head>
+
+<body>
+<div class="maincontent">
+    <header>
+        <% include ../partials/header %>
+    </header>
+
+    <main>
+        <div class="jumbotron">
+            <h1>Profile</h1>
+            <p><%= user.username %></p>
+            <p>Thank you for registering with MyMural. We will keep you in touch with activity on the site</p>
+            <h2>Manage Contact Details</h2>
+            <p>Recieve emails Y/N</p>
+            <h2>Resident or Artist?</h2>
+            <p>Do you wish to register as either a resident or an Artist?</p>
+            <a href="/artist/register">artist</a>
+            <a href="/resident/register">resident</a>
+        </div>
+    </main>
+
+    <footer>
+        <% include ../partials/footer %>
+    </footer>
+</div>
+</body>
+
+</html>

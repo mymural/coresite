@@ -1,0 +1,122 @@
+<!-- views/homepage -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ./partials/head %>
+</head>
+
+<body>
+
+    <div class="maincontent">
+    <header>
+        <% include ./partials/header %>
+    </header>
+    <main>
+<!-- Sign Up and Sign In -->
+<div>
+    <div id="signup_button"><a href="/register"><img src="/images/SIGN_UP_rev1.png" height="130"></a></div>
+    <div id="signin_button"><a href="/signin"><img src="/images/SIGN_IN_rev1.png" height="130"></a></div>
+</div>
+
+<div>
+    <!-- The intro block of text -->
+    <div id="intro_text">
+        <img src="/images/website_mobile_MyMural_blurb.png" width="100%">
+    </div>
+</div>
+
+<h2>Slideshow</h2>
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+        <img src="/images/slider/MM_process_web_mobile_3-1.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="/images/slider/MM_process_web_mobile_3-2.jpg" style="width:100%">
+        <div class="text">Caption Text</div>
+    </div>
+
+    <div class="mySlides fade">
+        <img src="/images/slider/MM_process_web_mobile_3-3.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="/images/slider/MM_process_web_mobile_3-4.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="/images/slider/MM_process_web_mobile_3-5.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="/images/slider/MM_process_web_mobile_3-6.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="/images/slider/MM_process_web_mobile_3-7.jpg" style="width:100%">
+    </div>
+
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span>
+    <span class="dot" onclick="currentSlide(7)"></span>
+</div>
+
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+</script>
+
+    </main>
+
+    <footer>
+        <% include ./partials/footer %>
+    </footer>
+</div>
+</body>
+
+</html>

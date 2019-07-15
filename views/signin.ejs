@@ -1,0 +1,46 @@
+<!-- views/signin -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ./partials/head %>
+</head>
+
+<body>
+<div class="maincontent">
+    <header>
+        <% include ./partials/header %>
+    </header>
+
+    <main>
+        <div>
+            <img src="/images/SIGN_IN_rev1.png" height="130">
+            <p>Sign into your user account here:</p>
+            <form method="post" action="/login" class="form-horizontal">
+                <div class="form-group">
+                    <div class="col-sm-10">
+                        <label for='username'>email:</label>
+                        <input class='form-control' type='text' name='username'>
+                        <label for='password'>password:</label>
+                        <input class='form-control' type='password' name='password'>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <p>
+                            <button type="submit" name="submit" id="submit" class="btn btn-primary">Sign In</button>
+                        </p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <% include ./partials/footer %>
+    </footer>
+</div>
+</body>
+
+</html>
