@@ -16,7 +16,7 @@
     "cors": "^2.8.5",
     "ejs": "^2.6.1",
     "event-stream": "^4.0.1",
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "mongoose": "^5.3.2",
     "multer": "^1.4.1",
     "nodemon": "^1.18.6",
